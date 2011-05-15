@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Design Request Form | <%= @title %></title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+	<%= render 'layouts/head' %>
+	<body>
+		<%= render 'layouts/header' %>
 
-<%= yield %>
+		<section>
+			<%= yield %>
+		</section>
 
-</body>
+		<%= render 'layouts/footer' %>
+	</body>
 </html>
