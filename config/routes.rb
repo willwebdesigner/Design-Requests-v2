@@ -1,4 +1,9 @@
 RequestForm::Application.routes.draw do
+  # Users 
+  resources :users                          # This creates a RESTful Users resource
+  match '/signup', :to => 'users#new'
+  
+  # Static pages
   root :to => 'pages#home'  
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'

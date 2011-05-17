@@ -1,12 +1,11 @@
 <header>
-	<% logo = image_tag("core/headerLogo.png", :alt => "Request It", :class => "") %>
 	<%= link_to logo, root_path %>
 	<nav class="main">
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "About", about_path %></li>
 			<li><%= link_to "Help", help_path %></li>
-			<li><%= link_to "Sign In", '#'%></li>
+			<li><%= link_to "Sign In", signup_path %></li>
 		</ul>
 	</nav>	
 </header>
