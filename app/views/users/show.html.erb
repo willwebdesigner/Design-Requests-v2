@@ -1,1 +1,10 @@
-<%= @user.name %> <%= @user.email %>
+<h1>
+  	<%= gravatar_for @user %>
+	<%= @user.name %>
+</h1>
+
+<ul>
+	<li>Name: <%= @user.name %></li>
+	<li>URL: <%= link_to user_url(@user), @user %></li>
+	<li>Email: <%= @user.email.downcase %></li>
+</ul>
