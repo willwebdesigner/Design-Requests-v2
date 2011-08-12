@@ -11,7 +11,7 @@
 
 require 'digest'
 class User < ActiveRecord::Base
-  attr_accessor :password                                               # Virtual (in memory password attribute)
+  attr_accessor :password                                               # Virtual (in memory password attribute, not in db)
   attr_accessible :name, :email, :password, :password_confirmation      # These are the attributes available to the end user
   before_save :encrypt_password                                         # A call to the :encrypt_password method before the object gets saved to the db
   

@@ -1,13 +1,13 @@
 RequestForm::Application.routes.draw do
-  # Users 
-  resources :users                          # This creates a RESTful Users resource
-  match '/signup', :to => 'users#new'
+ 
+  root :to => 'pages#home'
   
-  # Static pages
-  root :to => 'pages#home'  
+  resources :users                          # This creates a RESTful Users resource
+    
+  match '/signup',  :to => 'users#new'  
   match '/contact', :to => 'pages#contact'
-  match '/about', :to => 'pages#about'
-  match '/help', :to => 'pages#help'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

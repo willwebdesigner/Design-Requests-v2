@@ -10,9 +10,10 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:id])
+    @user = User.new(params[:user])
     if @user.save
-      #Handle a save
+      flash[:success] = "You have successfully signed up"
+      redirect_to user_path(@user)
     else
       @title = "Sign Up"
       render 'new'
